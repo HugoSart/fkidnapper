@@ -14,5 +14,5 @@ With the executable in hands, type:<br>
 ```
 fkidnapper <MODE> <FOLDER_NAME>
 ```
-Where <MODE> is the operation mode ("kidnap" for encryption or "rescue" for decryption) and <FOLDER_NAME> is the folder name to be encrypted recursivaly.
+Where <MODE> is the operation mode ("kidnap" for encryption or "decrypt" for decryption) and <FOLDER_NAME> is the folder name to be encrypted recursively.
 
